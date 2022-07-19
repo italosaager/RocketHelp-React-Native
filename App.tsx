@@ -1,6 +1,6 @@
 import { NativeBaseProvider, StatusBar } from 'native-base';
 import { useFonts, Roboto_400Regular, Roboto_700Bold  } from '@expo-google-fonts/roboto';
-import { SignIn } from './src/screens/Signin';
+import { Routes } from './src/routes'; //nao precisa colocar o nome do arquivo pois se não tem, busca pelo index
 import { THEME } from './src/styles/theme';
 import { Loading } from './src/components/Loading';
 
@@ -9,7 +9,7 @@ export default function App() {
   return (
     <NativeBaseProvider theme={THEME}>
       <StatusBar barStyle='light-content' backgroundColor='transparent' translucent/>
-      { fontsLoaded ? <SignIn/> : Loading}
+      { fontsLoaded ? <Routes/> : Loading}
     </NativeBaseProvider>
   );
 }
